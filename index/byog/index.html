@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../local_search/">
+        <link rel="prev" href="../outputs/">
       
       
-        <link rel="next" href="../question_generation/">
+        <link rel="next" href="../../prompt_tuning/overview/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>DRIFT Search - GraphRAG</title>
+        <title>Custom Graphs - GraphRAG</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#drift-search" class="md-skip">
+        <a href="#bring-your-own-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DRIFT Search
+              Custom Graphs
             
           </span>
         </div>
@@ -239,11 +239,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../index/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -279,13 +281,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../overview/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../query/overview/" class="md-tabs__link">
           
   
   
@@ -522,24 +522,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -552,7 +557,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Indexing
@@ -566,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -589,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index/default_dataflow/" class="md-nav__link">
+      <a href="../default_dataflow/" class="md-nav__link">
         
   
   
@@ -612,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index/methods/" class="md-nav__link">
+      <a href="../methods/" class="md-nav__link">
         
   
   
@@ -635,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index/inputs/" class="md-nav__link">
+      <a href="../inputs/" class="md-nav__link">
         
   
   
@@ -658,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index/outputs/" class="md-nav__link">
+      <a href="../outputs/" class="md-nav__link">
         
   
   
@@ -678,10 +683,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../index/byog/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Custom Graphs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -692,6 +719,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-additional-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Additional Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional Additional Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expanded-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expanded Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastgraphrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      FastGraphRAG
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -825,29 +965,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -860,7 +995,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Query
@@ -874,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../query/overview/" class="md-nav__link">
         
   
   
@@ -897,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../global_search/" class="md-nav__link">
+      <a href="../../query/global_search/" class="md-nav__link">
         
   
   
@@ -920,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../local_search/" class="md-nav__link">
+      <a href="../../query/local_search/" class="md-nav__link">
         
   
   
@@ -940,32 +1075,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    DRIFT Search
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../query/drift_search/" class="md-nav__link">
         
   
   
@@ -976,71 +1089,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#combining-local-and-global-search" class="md-nav__link">
-    <span class="md-ellipsis">
-      Combining Local and Global Search
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methodology" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methodology
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1053,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../question_generation/" class="md-nav__link">
+      <a href="../../query/question_generation/" class="md-nav__link">
         
   
   
@@ -1117,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../notebooks/overview/" class="md-nav__link">
+      <a href="../../query/notebooks/overview/" class="md-nav__link">
         
   
   
@@ -1595,45 +1643,93 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#combining-local-and-global-search" class="md-nav__link">
+  <a href="#tables" class="md-nav__link">
     <span class="md-ellipsis">
-      Combining Local and Global Search
+      Tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Configuration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#methodology" class="md-nav__link">
+  <a href="#optional-additional-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Methodology
+      Optional Additional Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional Additional Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Units
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#expanded-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Expanded Config
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#fastgraphrag" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Use
+      FastGraphRAG
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Learn More
+      Setup
     </span>
   </a>
   
@@ -1658,31 +1754,49 @@
   
 
 
-<h1 id="drift-search">DRIFT Search 🔎</h1>
-<h2 id="combining-local-and-global-search">Combining Local and Global Search</h2>
-<p>GraphRAG is a technique that uses large language models (LLMs) to create knowledge graphs and summaries from unstructured text documents and leverages them to improve retrieval-augmented generation (RAG) operations on private datasets. It offers comprehensive global overviews of large, private troves of unstructured text documents while also enabling exploration of detailed, localized information. By using LLMs to create comprehensive knowledge graphs that connect and describe entities and relationships contained in those documents, GraphRAG leverages semantic structuring of the data to generate responses to a wide variety of complex user queries.</p>
-<p>DRIFT search (Dynamic Reasoning and Inference with Flexible Traversal) builds upon Microsoft’s GraphRAG technique, combining characteristics of both global and local search to generate detailed responses in a method that balances computational costs with quality outcomes using our <a href="https://github.com/microsoft/graphrag/blob/main//graphrag/query/structured_search/drift_search/">drift search</a> method.</p>
-<h2 id="methodology">Methodology</h2>
-<p align="center">
-<img src="../../img/drift-search-diagram.png" alt="Figure 1. An entire DRIFT search hierarchy highlighting the three core phases of the DRIFT search process." align="center" />
-</p>
-<p align="center"><i><small>
-Figure 1. An entire DRIFT search hierarchy highlighting the three core phases of the DRIFT search process. A (Primer): DRIFT compares the user’s query with the top K most semantically relevant community reports, generating a broad initial answer and follow-up questions to steer further exploration. B (Follow-Up): DRIFT uses local search to refine queries, producing additional intermediate answers and follow-up questions that enhance specificity, guiding the engine towards context-rich information. A glyph on each node in the diagram shows the confidence the algorithm has to continue the query expansion step.  C (Output Hierarchy): The final output is a hierarchical structure of questions and answers ranked by relevance, reflecting a balanced mix of global insights and local refinements, making the results adaptable and comprehensive.</small></i></p>
-
-<p>DRIFT Search introduces a new approach to local search queries by including community information in the search process. This greatly expands the breadth of the query’s starting point and leads to retrieval and usage of a far higher variety of facts in the final answer. This addition expands the GraphRAG query engine by providing a more comprehensive option for local search, which uses community insights to refine a query into detailed follow-up questions.</p>
-<h2 id="configuration">Configuration</h2>
-<p>Below are the key parameters of the <a href="https://github.com/microsoft/graphrag/blob/main//graphrag/query/structured_search/drift_search/search.py">DRIFTSearch class</a>:</p>
+<h1 id="bring-your-own-graph">Bring Your Own Graph</h1>
+<p>Several users have asked if they can bring their own existing graph and have it summarized for query with GraphRAG. There are many possible ways to do this, but here we'll describe a simple method that aligns with the existing GraphRAG workflows quite easily.</p>
+<p>To cover the basic use cases for GraphRAG query, you should have two or three tables derived from your data:</p>
 <ul>
-<li><code>llm</code>: OpenAI model object to be used for response generation</li>
-<li><code>context_builder</code>: <a href="https://github.com/microsoft/graphrag/blob/main/graphrag/query/structured_search/drift_search/drift_context.py">context builder</a> object to be used for preparing context data from community reports and query information</li>
-<li><code>config</code>: model to define the DRIFT Search hyperparameters. <a href="https://github.com/microsoft/graphrag/blob/main/graphrag/config/models/drift_search_config.py">DRIFT Config model</a></li>
-<li><code>token_encoder</code>: token encoder for tracking the budget for the algorithm.</li>
-<li><code>query_state</code>: a state object as defined in <a href="https://github.com/microsoft/graphrag/blob/main/graphrag/query/structured_search/drift_search/state.py">Query State</a> that allows to track execution of a DRIFT Search instance, alongside follow ups and <a href="https://github.com/microsoft/graphrag/blob/main/graphrag/query/structured_search/drift_search/action.py">DRIFT actions</a>.</li>
+<li>entities.parquet - this is the list of entities found in the dataset, which are the nodes of the graph.</li>
+<li>relationships.parquet - this is the list of relationships found in the dataset, which are the edges of the graph.</li>
+<li>text_units.parquet - this is the source text chunks the graph was extracted from. This is optional depending on the query method you intend to use (described later).</li>
 </ul>
-<h2 id="how-to-use">How to Use</h2>
-<p>An example of a drift search scenario can be found in the following <a href="../../examples_notebooks/drift_search/">notebook</a>.</p>
-<h2 id="learn-more">Learn More</h2>
-<p>For a more in-depth look at the DRIFT search method, please refer to our <a href="https://www.microsoft.com/en-us/research/blog/introducing-drift-search-combining-global-and-local-search-methods-to-improve-quality-and-efficiency/">DRIFT Search blog post</a></p>
+<p>The approach described here will be to run a custom GraphRAG workflow pipeline that assumes the text chunking, entity extraction, and relationship extraction has already occurred.</p>
+<h2 id="tables">Tables</h2>
+<h3 id="entities">Entities</h3>
+<p>See the full entities <a href="../outputs/#entities">table schema</a>. For graph summarization purposes, you only need id, title, description, and the list of text_unit_ids.</p>
+<p>The additional properties are used for optional graph visualization purposes.</p>
+<h3 id="relationships">Relationships</h3>
+<p>See the full relationships <a href="../outputs/#relationships">table schema</a>. For graph summarization purposes, you only need id, source, target, description, weight, and the list of text_unit_ids.</p>
+<blockquote>
+<p>Note: the <code>weight</code> field is important because it is used to properly compute Leiden communities!</p>
+</blockquote>
+<h2 id="workflow-configuration">Workflow Configuration</h2>
+<p>GraphRAG includes the ability to specify <em>only</em> the specific workflow steps that you need. For basic graph summarization and query, you need the following config in your settings.yaml:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">workflows</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">create_communities</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">create_community_reports</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<p>This will result in only the minimal workflows required for GraphRAG <a href="../../query/global_search/">Global Search</a>.</p>
+<h2 id="optional-additional-config">Optional Additional Config</h2>
+<p>If you would like to run <a href="../../query/local_search/">Local</a>, <a href="../../query/drift_search/">DRIFT</a>, or <a href="../../query/overview/#basic-search">Basic</a> Search, you will need to include text_units and some embeddings.</p>
+<h3 id="text-units">Text Units</h3>
+<p>See the full text_units <a href="../outputs/#text_units">table schema</a>. Text units are chunks of your documents that are sized to ensure they fit into the context window of your model. Some search methods use these, so you may want to include them if you have them.</p>
+<h3 id="expanded-config">Expanded Config</h3>
+<p>To perform the other search types above, you need some of the content to be embedded. Simply add the embeddings workflow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">workflows</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">create_communities</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">create_community_reports</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">generate_text_embeddings</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<h3 id="fastgraphrag">FastGraphRAG</h3>
+<p><a href="../methods/#fastgraphrag">FastGraphRAG</a> uses text_units for the community reports instead of the entity and relationship descriptions. If your graph is sourced in such a way that it does not have descriptions, this might be a useful alternative. In this case, you would update your workflows list to include the text variant of the community reports workflow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">workflows</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">create_communities</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">create_community_reports_text</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">generate_text_embeddings</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<p>This method requires that your entities and relationships tables have valid links to a list of text_unit_ids. Also note that <code>generate_text_embeddings</code> is still only required if you are doing searches other than Global Search.</p>
+<h2 id="setup">Setup</h2>
+<p>Putting it all together:</p>
+<ul>
+<li><code>output</code>: Create an output folder and put your entities and relationships (and optionally text_units) parquet files in it.</li>
+<li>Update your config as noted above to only run the workflows subset you need.</li>
+<li>Run <code>graphrag index --root &lt;your project root&gt;</code></li>
+</ul>
 
 
 
@@ -1712,7 +1826,7 @@ Figure 1. An entire DRIFT search hierarchy highlighting the three core phases of
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../local_search/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Local Search">
+          <a href="../outputs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Outputs">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1722,20 +1836,20 @@ Figure 1. An entire DRIFT search hierarchy highlighting the three core phases of
                 Previous
               </span>
               <div class="md-ellipsis">
-                Local Search
+                Outputs
               </div>
             </div>
           </a>
         
         
           
-          <a href="../question_generation/" class="md-footer__link md-footer__link--next" aria-label="Next: Question Generation">
+          <a href="../../prompt_tuning/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Question Generation
+                Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">
